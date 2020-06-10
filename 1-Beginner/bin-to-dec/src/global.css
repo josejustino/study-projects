@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Roboto, sans-serif;
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 960px;
+    height: 30vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container .content {
+    flex-direction: column;
+}
+
+.form-container .content h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-container .content .binary-decimal-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container .content,
+.form-container .content .binary-decimal-content .decimal-content {
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+}
+
+.form-container .content .binary-decimal-content .form,
+.form-container .content .decimal-content {
+    width: 50%;
+    max-width: 480px;
+}
+
+form input,
+.form-container .content .binary-decimal-content .decimal-content {
+    height: 40px;
+    color: #737380;
+    border: 1px solid #f0f0f5;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.form-container .content .binary-decimal-content .decimal-content {
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.form-container .content .binary-decimal-content .decimal-content span {
+    overflow: hidden;
+    color: #737380;
+}
+
+.button {
+    position: relative;
+    top: 10px;
+    border: 0;
+    background: #fff;
+    width: 83%;
+    height: 37px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: filter 0.2s;
+}
+
+.button:hover {
+    filter: brightness(90%);
+}
