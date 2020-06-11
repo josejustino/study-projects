@@ -19,26 +19,17 @@ function App() {
 
         setErrorMessage('');
 
-        if (
-            verifyIfHaveUpToEightDigits(data.binary) &&
-            verifyIfIsBinary(data.binary)
-        ) {
-            let result = data.binary
-                .split('')
-                .reverse()
-                .map((number) => {
-                    return Number(number);
-                })
-                .reduce((acumulator, nextElement, index) => {
-                    return acumulator + nextElement * Math.pow(2, index);
-                });
+        let result = data.binary
+            .split('')
+            .reverse()
+            .map((number) => {
+                return Number(number);
+            })
+            .reduce((acumulator, nextElement, index) => {
+                return acumulator + nextElement * Math.pow(2, index);
+            });
 
-            setDecimal(result);
-        }
-    }
-
-    function verifyIfHaveUpToEightDigits(binaryNumber) {
-        return binaryNumber.length < 9 ? true : false;
+        setDecimal(result);
     }
 
     function verifyIfIsBinary(binaryNumber) {
@@ -49,7 +40,6 @@ function App() {
         <div className="form-container">
             <div className="content">
                 <h1>Binary to Decimal Converter</h1>
-                {console.log(errorMessage)}
                 {errorMessage && (
                     <span style={{ color: 'red', marginTop: '20px' }}>
                         {errorMessage}
