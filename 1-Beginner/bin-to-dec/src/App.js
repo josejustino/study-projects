@@ -4,6 +4,7 @@ import './global.css';
 function App() {
     const [binary, setBinary] = useState('');
     const [decimal, setDecimal] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -11,6 +12,12 @@ function App() {
         const data = {
             binary,
         };
+
+        if (!verifyIfIsBinary(data.binary)) {
+            return setErrorMessage('Digit must be 0 or 1');
+        }
+
+        setErrorMessage('');
 
         if (
             verifyIfHaveUpToEightDigits(data.binary) &&
@@ -27,8 +34,6 @@ function App() {
                 });
 
             setDecimal(result);
-
-            console.log(result);
         }
     }
 
@@ -43,7 +48,13 @@ function App() {
     return (
         <div className="form-container">
             <div className="content">
-                <h1>Conversão de Binário para Decimal</h1>
+                <h1>Binary to Decimal Converter</h1>
+                {console.log(errorMessage)}
+                {errorMessage && (
+                    <span style={{ color: 'red', marginTop: '20px' }}>
+                        {errorMessage}
+                    </span>
+                )}
                 <div className="binary-decimal-content">
                     <form onSubmit={handleSubmit}>
                         <input
@@ -53,7 +64,7 @@ function App() {
                         />
 
                         <button type="submit" className="button">
-                            Converter
+                            Convert to decimal
                         </button>
                     </form>
 
@@ -67,6 +78,3 @@ function App() {
 }
 
 export default App;
-
-// 10
-// 0*2^0 + 1*2^1 = 0 + 2 = 2
