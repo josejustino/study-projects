@@ -15,7 +15,7 @@ body {
 
 .form-container {
     width: 100%;
-    max-width: 960px;
+    max-width: 480px;
     height: 30vh;
     margin: 0 auto;
 
@@ -41,7 +41,6 @@ body {
 
 .form-container .content,
 .form-container .content .binary-decimal-content .decimal-content {
-    width: 50%;
     padding: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -49,10 +48,13 @@ body {
     display: flex;
 }
 
-.form-container .content .binary-decimal-content .form,
+.form-container .content .binary-decimal-content form,
 .form-container .content .decimal-content {
-    width: 50%;
-    max-width: 480px;
+    width: 48%;
+}
+
+form input {
+    width: 100%;
 }
 
 form input,
@@ -80,7 +82,7 @@ form input,
     top: 10px;
     border: 0;
     background: #fff;
-    width: 83%;
+    width: 208%;
     height: 37px;
     border-radius: 8px;
     font-weight: 700;
