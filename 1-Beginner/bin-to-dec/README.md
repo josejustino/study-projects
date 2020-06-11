@@ -1,6 +1,6 @@
 # Binary to Decimal Converter
 
-Idea from <a href='https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md'>App Ideas - Bin2Dec</a>
+Idea from: <a href='https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md'>App Ideas - Bin2Dec</a>
 
 Demo: <a href='https://ki560.csb.app/'>Bin2Dec</a>
 
