@@ -1,12 +1,15 @@
-let inputTl = document.querySelector('#input-tl');
+let $ = document.querySelector.bind(document);
 
-inputTl.addEventListener('keyup', function(){
-   let surfaceBorder = document.querySelector('#surface');
+let inputTl = $('#input-tl');
+let inputTr = $('#input-tr');
+let inputBr = $('#input-br');
+let inputBl = $('#input-bl');
 
-   surfaceBorder.style.borderTopLeftRadius = inputTl.value ? `${inputTl.value}px` : 0;
+document.addEventListener('keyup', function(){
+   let surfaceBorder = document.querySelector('#surface').style;
 
-   console.log(surfaceBorder)
-   console.log(inputTl)
-   console.log(inputTl.value)
-   console.log(surfaceBorder.style.borderTopLeftRadius)
+   surfaceBorder.borderTopLeftRadius = inputTl.value ? `${inputTl.value}px` : 0;
+   surfaceBorder.borderTopRightRadius = inputTr.value ? `${inputTr.value}px` : 0;
+   surfaceBorder.borderBottomRightRadius = inputBr.value ? `${inputBr.value}px` : 0;
+   surfaceBorder.borderBottomLeftRadius = inputBl.value ? `${inputBl.value}px` : 0;
 }, false)
